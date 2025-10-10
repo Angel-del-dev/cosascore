@@ -1,7 +1,7 @@
 <?php
 
-namespace src\lib\middleware;
-use src\lib\auth\SimpleAuth;
+namespace cosascore\src\lib\middleware;
+use cosascore\src\lib\auth\SimpleAuth;
 
 class Middleware {
     static protected $middleware = [];

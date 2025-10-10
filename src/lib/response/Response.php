@@ -1,9 +1,9 @@
 <?php
 
-namespace lib\Response;
+namespace cosascore\lib\Response;
 
-use src\lib\response\ResponseType;
-use src\lib\response\ValidResponse;
+use cosascore\src\lib\response\ResponseType;
+use cosascore\src\lib\response\ValidResponse;
 
 class Response {
     static public function Handle($response, string $type = 'text/json'):ResponseType {

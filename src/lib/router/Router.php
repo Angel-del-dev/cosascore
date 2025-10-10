@@ -1,10 +1,10 @@
 <?php
 
-namespace src\lib\router;
+namespace cosascore\src\lib\router;
 
-use src\lib\components\Route;
-use src\lib\Response\ResponseType;
-use src\lib\render\ViewRenderer;
+use cosascore\src\lib\components\Route;
+use cosascore\src\lib\Response\ResponseType;
+use cosascore\src\lib\render\ViewRenderer;
 
 require_once '../routes/raw.php';
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace src\lib\Response;
+namespace cosascore\src\lib\Response;
 use stdClass;
 
 class ValidResponse {

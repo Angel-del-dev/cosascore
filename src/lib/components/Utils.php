@@ -1,6 +1,6 @@
 <?php
 
-namespace src\lib\components;
+namespace cosascore\src\lib\components;
 
 use stdClass;
 
