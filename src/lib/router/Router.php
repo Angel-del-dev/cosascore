@@ -6,8 +6,6 @@ use cosascore\src\lib\components\Route;
 use cosascore\src\lib\Response\ResponseType;
 use cosascore\src\lib\render\ViewRenderer;
 
-require_once '../routes/raw.php';
-
 class Router {
     static public function Create() {
         $routes_data = Route::_GetRoutes($_SERVER['REQUEST_METHOD']);
