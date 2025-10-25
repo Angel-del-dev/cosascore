@@ -16,14 +16,8 @@ class Utils {
 
         return $f_url;
     }
-    static function INI():stdClass {
-        $path = '/ini.json';
-        if(!is_file($path)) {
-            print_r('INI file not found');
-            exit;
-        }
-        $contents = file_get_contents($path);
-        return $contents == '' ? new stdClass() : json_decode($contents);
+    static function INI(string $path):array|bool {
+        return parse_ini_file($path, true);
     }
 }
 
