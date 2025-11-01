@@ -5,10 +5,10 @@ namespace cosascore\src\lib\components;
 use stdClass;
 
 class Request {
-    public stdClass$server;
+    public stdClass $server;
     public function __construct() {
         $this->server = (object) $_SERVER;
-        $this->server->POST = isset($_POST['req']) ? json_decode(base64_decode($_POST['req'])) : new stdClass();
+        $this->server->POST = isset($_POST['req']) ? json_decode(base64_decode($_POST['req'])) : json_decode(file_get_contents("php://input"), true);
         $this->server->GET = $_GET;
     }
     /**
