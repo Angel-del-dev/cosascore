@@ -8,7 +8,7 @@ class Request {
     public stdClass $server;
     public function __construct() {
         $this->server = (object) $_SERVER;
-        $this->server->POST = isset($_POST['req']) ? json_decode(base64_decode($_POST['req'])) : json_decode(file_get_contents("php://input"), true);
+        $this->server->POST = isset($_POST['req']) ? json_decode(base64_decode($_POST['req'])) : json_decode(file_get_contents("php://input"));
         $this->server->GET = $_GET;
     }
     /**
