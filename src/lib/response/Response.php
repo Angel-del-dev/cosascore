@@ -1,6 +1,6 @@
 <?php
 
-namespace cosascore\lib\Response;
+namespace cosascore\src\lib\response;
 
 use cosascore\src\lib\response\ResponseType;
 use cosascore\src\lib\response\ValidResponse;
