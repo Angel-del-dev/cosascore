@@ -25,9 +25,10 @@ class Model {
      */
     public static function Get($Params = []):array {
         $query = sprintf(" SELECT %s FROM %s ", implode(', ', static::$Columns), static::$Table);
+        if(count($Params) > 0) $query .= " WHERE ";
         foreach($Params as $param) {
             $typeconcat = isset($param[3]) ? $param[3] : '';
-            $query .= sprintf(' WHERE %s %s :%s %s ', $param[0], $param[1], $param[0], $typeconcat);
+            $query .= sprintf(' %s %s :%s %s ', $param[0], $param[1], $param[0], $typeconcat);
         }
 
        self::Connection();
