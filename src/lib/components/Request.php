@@ -25,7 +25,7 @@ class Request {
         return $this->server->REQUEST_METHOD;
     }
 
-    public function Get(string $parameter):stdClass|string|bool {
+    public function Get(string $parameter):stdClass|array|string|bool {
         return isset($this->server->$parameter) ? $this->server->$parameter : false;
     }
 
