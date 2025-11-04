@@ -93,30 +93,31 @@ class Model {
     /**
      * [Delete function]
      *
-     * @param array($key => $value) ...$DeleteParams
+     * @param array($key => $value) $DeleteParams
      * 
      * @return [type]
      * 
      */
-    public static function Delete(...$DeleteParams) {
+    public static function Delete($DeleteParams) {
         self::Connection();
 
+        $query = sprintf(" DELETE FROM %s", static::$Table);
+        if(count($DeleteParams) > 0) $query .= " WHERE ";
+       
         foreach($DeleteParams as $param) {
-            $query = sprintf(" DELETE FROM %s WHERE ", static::$Table);
-            $conditions = [];
-
-            foreach(static::$Keys as $key) {
-                $conditions[] = sprintf(" %s = :%s ", $key, $key);
-            }
-            $query .= implode(' AND ', $conditions);
-            $sql = self::$connection->newQuery($query);
-            foreach($param as $k => $value) {
-                $sql->params->$k = $value;
-            }
-            
-            $sql->Execute();
-            $sql->close();
+            $typeconcat = isset($param[3]) ? $param[3] : '';
+            $query .= sprintf(' %s %s :%s %s ', $param[0], $param[1], $param[0], $typeconcat);
         }
+        
+        self::Connection();
+       
+       $sql = self::$connection->newQuery($query);
+        foreach($DeleteParams as $Param) {
+            $Key = $Param[0];
+            $sql->params->$Key = $Param[2];
+        }
+        $_ = $sql->Execute();
+        $sql->close();
         
     }
 }
