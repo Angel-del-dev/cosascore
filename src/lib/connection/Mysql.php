@@ -1,8 +1,8 @@
 <?php
 
-namespace cosascore\src\lib\connection;
+namespace barephrame\src\lib\connection;
 
-use cosascore\src\lib\components\Utils;
+use barephrame\src\lib\components\Utils;
 use Error;
 use pdo;
 use stdClass;

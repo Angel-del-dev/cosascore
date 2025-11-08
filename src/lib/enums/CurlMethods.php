@@ -1,6 +1,6 @@
 <?php
 
-namespace cosascore\src\lib\enums;
+namespace barephrame\src\lib\enums;
 
 enum CurlMethods:String {
     case POST = 'POST';

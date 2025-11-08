@@ -1,8 +1,8 @@
 <?php
 
-namespace cosascore\src\lib\models;
+namespace barephrame\src\lib\models;
 
-use cosascore\src\lib\connection\Mysql;
+use barephrame\src\lib\connection\Mysql;
 
 class Model {
     protected static Mysql $connection;

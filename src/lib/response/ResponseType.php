@@ -1,6 +1,6 @@
 <?php
 
-namespace cosascore\src\lib\response;
+namespace barephrame\src\lib\response;
 use stdClass;
 
 class ResponseType {

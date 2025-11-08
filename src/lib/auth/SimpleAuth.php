@@ -1,6 +1,6 @@
 <?php
 
-namespace cosascore\src\lib\auth;
+namespace barephrame\src\lib\auth;
 
 class SimpleAuth {
     static public function isAuthMiddleware():bool {

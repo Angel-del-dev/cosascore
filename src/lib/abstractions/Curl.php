@@ -1,9 +1,9 @@
 <?php
 
-namespace cosascore\src\lib\abstractions;
+namespace barephrame\src\lib\abstractions;
 
-use cosascore\src\lib\components\CurlResponseType;
-use cosascore\src\lib\enums\CurlMethods;
+use barephrame\src\lib\components\CurlResponseType;
+use barephrame\src\lib\enums\CurlMethods;
 
 class Curl {
     private string $url;

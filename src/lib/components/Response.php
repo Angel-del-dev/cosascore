@@ -1,5 +1,5 @@
 <?php
-namespace cosascore\src\lib\components;
+namespace barephrame\src\lib\components;
 
 use stdClass;
 

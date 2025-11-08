@@ -1,6 +1,6 @@
 <?php
 
-namespace cosascore\src\lib\render;
+namespace barephrame\src\lib\render;
 
 class View {
     /**

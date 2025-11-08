@@ -1,6 +1,6 @@
 <?php
 
-namespace cosascore\src\lib\components;
+namespace barephrame\src\lib\components;
 
 class Utils {
     static function URL(string $url):array {

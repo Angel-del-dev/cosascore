@@ -1,6 +1,6 @@
 <?php
 
-namespace cosascore\src\lib\components;
+namespace barephrame\src\lib\components;
 
 class CurlResponseType {
     private array $response;

@@ -1,10 +1,10 @@
 <?php
 
-namespace cosascore\src\lib\router;
+namespace barephrame\src\lib\router;
 
-use cosascore\src\lib\components\Route;
-use cosascore\src\lib\Response\ResponseType;
-use cosascore\src\lib\render\ViewRenderer;
+use barephrame\src\lib\components\Route;
+use barephrame\src\lib\Response\ResponseType;
+use barephrame\src\lib\render\ViewRenderer;
 
 class Router {
     static public function Create() {
