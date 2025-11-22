@@ -16,7 +16,7 @@ class Route {
     }
 
     static public function Post(string $route, string $class, string $fn) :void {
-        if(!isset(self::$routes['GET'])) self::$routes['POST'] = [];
+        if(!isset(self::$routes['POST'])) self::$routes['POST'] = [];
         if($route == self::$not_found_route) {
             self::$routes['POST_NOT_FOUND'] = ['CLASS' => $class, 'FN' => $fn];
             return;
